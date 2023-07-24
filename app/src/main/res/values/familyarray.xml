@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="family_array">
+        <item>해당없음</item>
+        <item>5인이상 가구</item>
+        <item>출산가구</item>
+        <item>3자녀이상 가구</item>
+        <item>생명유지장치</item>
+    </string-array>
+</resources>
