@@ -4,192 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingTop="20dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="8dp">
-
-        <TextView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:text="계약종별" />
-
-        <RadioGroup
-            android:id="@+id/contract"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/lowp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="1dp"
-                android:text="주택용 저압" />
-
-            <RadioButton
-                android:id="@+id/highp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="주택용 고압" />
-        </RadioGroup>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="45dp">
-
-        <TextView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:text="주거구분" />
-
-        <RadioGroup
-            android:id="@+id/house"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/forl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="30dp"
-                android:text="주거용" />
-
-            <RadioButton
-                android:id="@+id/notl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="비주거용" />
-        </RadioGroup>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="82dp">
-
-        <TextView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:text="대가족 /\n생명유지장치" />
-        <Spinner
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="137dp">
-
-        <TextView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:text="복지할인" />
-        <Spinner
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="174dp">
-
-        <TextView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:text="사용량"/>
-
-        <EditText
-            android:id="@+id/usage"
-            android:layout_width="215dp"
-            android:layout_height="wrap_content"
-            android:hint="0000 kWh"
-            android:textAlignment="textEnd" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="220dp">
-
-        <TextView
-            android:layout_width="280sp"
-            android:layout_height="wrap_content"
-            android:text="하계(7.1~8.31) 기간"/>
-
-        <CheckBox
-            android:id="@+id/summercheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="270dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* 서울시 요금 금액을 기준으로 계산함"
-            android:textColor="#FF0000"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#000000"
-        android:text="전기 요금 계산"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    android:layout_height="match_parent">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -208,9 +23,13 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017"
         app:navGraph="@navigation/mobile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
