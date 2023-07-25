@@ -13,14 +13,17 @@
         android:theme="@style/Theme.ChargeCalculater"
         tools:targetApi="31">
         <activity
-            android:name=".ResultElectric"
-            android:parentActivityName=".MainActivity"
+            android:name=".Test"
             android:exported="false" />
         <activity
+            android:name=".ResultElectric"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="adjustNothing"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustNothing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
