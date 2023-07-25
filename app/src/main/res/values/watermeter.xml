@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="meter">
+        <item>15mm</item>
+        <item>20mm</item>
+        <item>25mm</item>
+        <item>32mm</item>
+        <item>40mm</item>
+        <item>50mm</item>
+        <item>65mm</item>
+        <item>75mm</item>
+        <item>100mm</item>
+        <item>125mm</item>
+        <item>150mm</item>
+        <item>200mm</item>
+        <item>250mm</item>
+        <item>300mm</item>
+        <item>350mm</item>
+        <item>400mm</item>
+    </string-array>
+</resources>

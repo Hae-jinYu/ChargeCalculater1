@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="month">
+        <item>1개월</item>
+        <item>2개월</item>
+        <item>3개월</item>
+        <item>4개월</item>
+        <item>5개월</item>
+        <item>6개월</item>
+        <item>7개월</item>
+        <item>8개월</item>
+        <item>9개월</item>
+        <item>10개월</item>
+        <item>11개월</item>
+        <item>12개월</item>
+    </string-array>
+</resources>

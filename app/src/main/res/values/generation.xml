@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="generation">
+        <item>1세대</item>
+        <item>2세대</item>
+        <item>3세대</item>
+        <item>4세대</item>
+        <item>5세대</item>
+        <item>6세대</item>
+        <item>7세대</item>
+        <item>8세대</item>
+        <item>9세대</item>
+        <item>10세대</item>
+    </string-array>
+</resources>
