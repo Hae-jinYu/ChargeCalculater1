@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="familys">
+        <item>해당없음</item>
+        <item>5인이상 가구</item>
+        <item>출산가구</item>
+        <item>3자녀이상 가구</item>
+        <item>생명유지장치</item>
+    </string-array>
+    
+    <string-array name="welfares">
+        <item>해당없음</item>
+        <item>장애인</item>
+        <item>국가유공자</item>
+        <item>독립유공자</item>
+        <item>기초생활(생계,의료)</item>
+        <item>사회복지시설</item>
+        <item>5.18민주유공자</item>
+        <item>차상위계층</item>
+        <item>기초생활(주거,교육)</item>
+
+    </string-array>
+</resources>
