@@ -23,13 +23,17 @@
         <TextView
             android:layout_width="120sp"
             android:layout_height="wrap_content"
-            android:text="기본 요금" />
+            android:text="기본 요금"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/basebill"
-            android:layout_width="220dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:hint="0000"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="20dp"
+            android:hint="1000"
             android:inputType="number"
             android:textAlignment="textEnd" />
     </LinearLayout>
@@ -48,12 +52,16 @@
         <TextView
             android:layout_width="120sp"
             android:layout_height="wrap_content"
-            android:text="도시 가스 요금" />
+            android:text="도시 가스 요금"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/citygasbill"
-            android:layout_width="220dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:hint="19.691"
             android:inputType="number"
             android:textAlignment="textEnd" />
     </LinearLayout>
@@ -72,14 +80,17 @@
         <TextView
             android:layout_width="120sp"
             android:layout_height="wrap_content"
-            android:text="평균 열량" />
+            android:text="평균 열량"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/averageheat"
-            android:layout_width="220dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:hint="42.549  MJ/Nm3"
             android:inputType="number"
-            android:hint="MJ/Nm3"
             android:textAlignment="textEnd" />
     </LinearLayout>
 
@@ -97,12 +108,16 @@
         <TextView
             android:layout_width="120sp"
             android:layout_height="wrap_content"
-            android:text="보정 계수" />
+            android:text="보정 계수"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/modificationfactor"
-            android:layout_width="220dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:hint="0.9884"
             android:inputType="number"
             android:textAlignment="textEnd" />
     </LinearLayout>
@@ -119,16 +134,19 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:layout_width="120sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="도시 가스 사용량" />
+            android:text="도시 가스 사용량"
+            android:textColor="#000000"
+            android:textSize="17sp" />
 
         <EditText
             android:id="@+id/usagecitygas"
-            android:layout_width="220dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:layout_marginLeft="70dp"
             android:hint="MJ"
+            android:inputType="number"
             android:textAlignment="textEnd" />
     </LinearLayout>
 
@@ -136,7 +154,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="30dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,7 +165,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="* 서울시 요금 금액을 기준으로 계산함"
+            android:text="* 서울시 요금 금액을 기준으로 계산함\n   지역에 따라 요금, 평균 열량, 보정계수가 다를 수 있음"
             android:textColor="#FF0000"
             android:textSize="12sp" />
     </LinearLayout>
@@ -159,7 +177,9 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:background="#000000"
+        android:backgroundTint="#FF8661"
         android:text="가스 요금 계산"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
