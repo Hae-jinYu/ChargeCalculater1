@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     //전기부분
-    lateinit var elecresultTextView : TextView
+    lateinit var elecresultButton: Button
     lateinit var elecuse:EditText
     lateinit var eleclowp:RadioButton
     lateinit var elechighp:RadioButton
     lateinit var elecfamilynwelfare:Spinner
-    lateinit var elecresultbutton:Button
     lateinit var elecsummer:CheckBox
+    lateinit var elecresultbutton:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,16 +54,15 @@ class MainActivity : AppCompatActivity() {
 
         //전기부분
 
-        elecresultbutton=findViewById(R.id.resultbutton)
+        elecresultButton=findViewById(R.id.resultbutton)
         elecuse=findViewById(R.id.usage)
         eleclowp=findViewById(R.id.lowp)
         elechighp=findViewById(R.id.highp)
         elecfamilynwelfare=findViewById(R.id.familyandwelfare)
         elecsummer=findViewById(R.id.summercheck)
 
-        elecresultbutton.setOnClickListener{
+        elecresultButton.setOnClickListener{
             var intent= Intent(this,ResultElectric::class.java)
-            intent.putExtra("elecresultTextView",elecresultTextView.toString())
             intent.putExtra("elecuse",elecuse.text.toString())
             intent.putExtra("eleclowp",eleclowp.toString())
             intent.putExtra("elechighp",elechighp.toString())
