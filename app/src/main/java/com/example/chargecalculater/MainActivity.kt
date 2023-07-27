@@ -1,10 +1,17 @@
 package com.example.chargecalculater
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore.Audio.Radio
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.Spinner
+import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -17,11 +24,20 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-
+    //전기부분
+    lateinit var elecresultTextView : TextView
+    lateinit var elecuse:EditText
+    lateinit var eleclowp:RadioButton
+    lateinit var elechighp:RadioButton
+    lateinit var elecforl:RadioButton
+    lateinit var elecnotl:RadioButton
+    lateinit var elecfamily:Spinner
+    lateinit var elecwelfare:Spinner
+    lateinit var elecresultbutton:Button
+    lateinit var elecsummer:CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -39,6 +55,33 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
 
+        //전기부분
 
+        elecresultbutton=findViewById(R.id.resultbutton)
+        elecuse=findViewById(R.id.usage)
+        eleclowp=findViewById(R.id.lowp)
+        elechighp=findViewById(R.id.highp)
+        elecforl=findViewById(R.id.forl)
+        elecnotl=findViewById(R.id.notl)
+        elecfamily=findViewById(R.id.family)
+        elecwelfare=findViewById(R.id.welfare)
+        elecsummer=findViewById(R.id.summercheck)
+
+        elecresultbutton.setOnClickListener{
+            var intent= Intent(this,ResultElectric::class.java)
+            intent.putExtra("elecresultTextView",elecresultTextView.toString())
+            intent.putExtra("elecuse",elecuse.text.toString())
+            intent.putExtra("eleclowp",eleclowp.toString())
+            intent.putExtra("elechighp",elechighp.toString())
+            intent.putExtra("elecforl",elecforl.toString())
+            intent.putExtra("elecnotl",elecnotl.toString())
+            intent.putExtra("elecfamily",elecnotl.toString())
+            intent.putExtra("elecwelfare",elecwelfare.toString())
+            intent.putExtra("elecfamily",elecfamily.toString())
+            intent.putExtra("elecsummer",elecsummer.toString())
+
+            startActivity(intent)
+
+        }
     }
 }
