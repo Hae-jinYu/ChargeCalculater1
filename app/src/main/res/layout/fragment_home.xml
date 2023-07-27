@@ -24,7 +24,9 @@
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="계약종별" />
+            android:text="계약종별"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <RadioGroup
             android:id="@+id/contract"
@@ -61,7 +63,9 @@
         <TextView
             android:layout_width="100sp"
             android:layout_height="match_parent"
-            android:text="대가족 /\n생명유지장치 /\n복지할인" />
+            android:text="대가족 /\n생명유지장치 /\n복지할인"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/familyandwelfare"
@@ -85,7 +89,9 @@
         <TextView
             android:layout_width="100sp"
             android:layout_height="wrap_content"
-            android:text="사용량" />
+            android:text="사용량"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/usage"
@@ -93,7 +99,8 @@
             android:layout_height="wrap_content"
             android:hint="0000 kWh"
             android:inputType="number"
-            android:textAlignment="textEnd" />
+            android:textAlignment="textEnd"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -109,7 +116,8 @@
         <TextView
             android:layout_width="300sp"
             android:layout_height="wrap_content"
-            android:text="하계(7.1~8.31) 기간" />
+            android:text="하계(7.1~8.31) 기간"
+            android:textColor="#353535" />
 
         <CheckBox
             android:id="@+id/summercheck"
@@ -140,11 +148,13 @@
     <Button
         android:id="@+id/resultbutton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:layout_marginBottom="40dp"
-        android:background="#000000"
+        android:backgroundTint="#FFDC25"
         android:text="전기 요금 계산"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
