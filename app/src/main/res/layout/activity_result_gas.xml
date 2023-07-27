@@ -49,8 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
         android:layout_marginTop="10dp"
-        android:text="* 서울시 요금 금액을 기준으로 계산함\n   지역에 따라 요금, 평균 열량, 보정계수가 다를 수 있음"
+        android:text="* 서울시 요금 금액을 기준으로 계산함\n   지역에 따라 요금의 차이가 날 수 있음"
         android:textColor="#FF2525"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gassquare" />
 

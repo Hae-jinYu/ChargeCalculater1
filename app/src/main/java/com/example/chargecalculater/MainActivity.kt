@@ -31,7 +31,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var elechighp:RadioButton
     lateinit var elecfamilynwelfare:Spinner
     lateinit var elecsummer:CheckBox
-    lateinit var elecresultbutton:Button
+
+
+    //수도부분
+    lateinit var waterResultBtn : Button
+    lateinit var watermeter : Spinner
+    lateinit var watermonth : Spinner
+    lateinit var waterusage : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
 
 
         //전기부분
