@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="generation">
-        <item>1세대</item>
-        <item>2세대</item>
-        <item>3세대</item>
-        <item>4세대</item>
-        <item>5세대</item>
-        <item>6세대</item>
-        <item>7세대</item>
-        <item>8세대</item>
-        <item>9세대</item>
-        <item>10세대</item>
+        <item>복지개별요금 감면</item>
+        <item>독립유공자 감면</item>
+        <item>다자녀 하수도 감면</item>
+        <item>한부모 감면</item>
+        <item>중증장애인 감면</item>
+        <item>자가검침 감면</item>
+        <item>전자고지 감면</item>
     </string-array>
 </resources>

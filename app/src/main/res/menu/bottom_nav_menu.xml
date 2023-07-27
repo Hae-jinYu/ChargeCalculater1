@@ -8,8 +8,10 @@
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/baseline_water_drop_24"
-        android:title="수도요금" />
+        android:icon="@drawable/bottom_water_icon"
+        android:title="수도요금"
+
+        />
 
     <item
         android:id="@+id/navigation_notifications"
