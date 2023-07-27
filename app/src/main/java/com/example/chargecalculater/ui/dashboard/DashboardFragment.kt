@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -20,6 +22,8 @@ import com.example.chargecalculater.databinding.FragmentDashboardBinding
 class DashboardFragment : Fragment() {
 
     lateinit var mainActivity: MainActivity
+
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mainActivity = context as MainActivity
@@ -57,11 +61,22 @@ class DashboardFragment : Fragment() {
         }
 
         val waterresult: Button = binding.waterbill
-        waterresult.findViewById<Button>(R.id.waterbill)
+
 
         waterresult.setOnClickListener {
             var intent = Intent(mainActivity, WaterResultActivity::class.java)
+
+
+
+            intent.putExtra("waterMeter", waterMeter.getSelectedItem().toString())
+            intent.putExtra("waterMonth", Month.getSelectedItem().toString())
+            intent.putExtra("waterDiscount", Generation.getSelectedItem().toString())
+            intent.putExtra("waterUsage", textView.text.toString())
+
+
             startActivity(intent)
+
+
         }
         return root
 
