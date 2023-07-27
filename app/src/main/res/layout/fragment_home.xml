@@ -60,87 +60,26 @@
 
         <TextView
             android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:text="주거구분" />
-
-        <RadioGroup
-            android:id="@+id/house"
-            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:text="대가족 /\n생명유지장치 /\n복지할인" />
 
-            <RadioButton
-                android:id="@+id/forl"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:paddingRight="30dp"
-                android:text="주거용" />
+        <Spinner
+            android:id="@+id/familyandwelfare"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
 
-            <RadioButton
-                android:id="@+id/notl"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:text="비주거용" />
-        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:layout_width="100sp"
-            android:layout_height="match_parent"
-            android:text="대가족 /\n생명유지장치" />
-
-        <Spinner
-            android:id="@+id/family"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:text="복지할인" />
-
-        <Spinner
-            android:id="@+id/welfare"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -158,13 +97,13 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -180,14 +119,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout7"
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -202,14 +141,14 @@
         android:id="@+id/resultbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
         android:background="#000000"
         android:text="전기 요금 계산"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         app:layout_constraintVertical_bias="0.3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

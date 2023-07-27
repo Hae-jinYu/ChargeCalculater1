@@ -29,10 +29,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var elecuse:EditText
     lateinit var eleclowp:RadioButton
     lateinit var elechighp:RadioButton
-    lateinit var elecforl:RadioButton
-    lateinit var elecnotl:RadioButton
-    lateinit var elecfamily:Spinner
-    lateinit var elecwelfare:Spinner
+    lateinit var elecfamilynwelfare:Spinner
     lateinit var elecresultbutton:Button
     lateinit var elecsummer:CheckBox
 
@@ -61,10 +58,7 @@ class MainActivity : AppCompatActivity() {
         elecuse=findViewById(R.id.usage)
         eleclowp=findViewById(R.id.lowp)
         elechighp=findViewById(R.id.highp)
-        elecforl=findViewById(R.id.forl)
-        elecnotl=findViewById(R.id.notl)
-        elecfamily=findViewById(R.id.family)
-        elecwelfare=findViewById(R.id.welfare)
+        elecfamilynwelfare=findViewById(R.id.familyandwelfare)
         elecsummer=findViewById(R.id.summercheck)
 
         elecresultbutton.setOnClickListener{
@@ -73,11 +67,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("elecuse",elecuse.text.toString())
             intent.putExtra("eleclowp",eleclowp.toString())
             intent.putExtra("elechighp",elechighp.toString())
-            intent.putExtra("elecforl",elecforl.toString())
-            intent.putExtra("elecnotl",elecnotl.toString())
-            intent.putExtra("elecfamily",elecnotl.toString())
-            intent.putExtra("elecwelfare",elecwelfare.toString())
-            intent.putExtra("elecfamily",elecfamily.toString())
+            intent.putExtra("elecfamilyandwelfare",elecfamilynwelfare.toString())
             intent.putExtra("elecsummer",elecsummer.toString())
 
             startActivity(intent)

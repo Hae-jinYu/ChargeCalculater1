@@ -40,11 +40,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val famAry = binding.family
-        famAry.adapter = ArrayAdapter.createFromResource(mainActivity, R.array.familys, android.R.layout.simple_spinner_item)
-
-        val welfAry = binding.welfare
-        welfAry.adapter = ArrayAdapter.createFromResource(mainActivity, R.array.welfares, android.R.layout.simple_spinner_item)
+        val famwelAry = binding.familyandwelfare
+        famwelAry.adapter = ArrayAdapter.createFromResource(mainActivity, R.array.familysandwelfares, android.R.layout.simple_spinner_item)
 
         val textView: TextView = binding.usage
         homeViewModel.text.observe(viewLifecycleOwner) {
