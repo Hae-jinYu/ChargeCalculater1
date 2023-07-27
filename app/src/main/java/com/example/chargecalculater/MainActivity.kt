@@ -63,14 +63,22 @@ class MainActivity : AppCompatActivity() {
 
         elecresultButton.setOnClickListener{
             var intent= Intent(this,ResultElectric::class.java)
-            intent.putExtra("elecuse",elecuse.text.toString())
-            intent.putExtra("eleclowp",eleclowp.toString())
+
+            intent.putExtra("elecuse",elecuse.text)
+            if(eleclowp.isChecked)
+                intent.putExtra("eleclow",true)
+            else
+                intent.putExtra("eleclow",false)
             intent.putExtra("elechighp",elechighp.toString())
-            intent.putExtra("elecfamilyandwelfare",elecfamilynwelfare.toString())
-            intent.putExtra("elecsummer",elecsummer.toString())
+            intent.putExtra("elecfamilyandwelfare",elecfamilynwelfare.selectedItem.toString())
+            if(elecsummer.isChecked)
+                intent.putExtra("elecsummer",true)
+            else
+                intent.putExtra("elecsummer",false)
 
             startActivity(intent)
 
         }
     }
 }
+

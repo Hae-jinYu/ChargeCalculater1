@@ -9,6 +9,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import kotlin.math.round
 
+
 class ResultElectric : AppCompatActivity() {
 
 
@@ -16,13 +17,12 @@ class ResultElectric : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_electric)
 
-        val elecresultTextView = findViewById<TextView>(R.id.textResult)
-
-        val elecuse= intent.getIntExtra("elecuse",0)
-        val eleclowp=intent.getStringExtra("eleclowp").toBoolean()
-        val elechighp=intent.getStringExtra("elechighp").toBoolean()
-        val elecfamilyandwelfare=intent.getStringExtra("elecfamilyandwelfare")
-        val elecsummer=intent.getStringExtra("elecsummer").toBoolean()
+        var elecresultTextView = findViewById<TextView>(R.id.textResult)
+0
+        var elecuse= intent.getIntExtra("elecuse",0)
+        var eleclowp=intent.getBooleanExtra("eleclowp",false)
+        var elecfamilyandwelfare=intent.getStringExtra("elecfamilyandwelfare")
+        var elecsummer=intent.getBooleanExtra("elecsummer",false)
 
 
         if(eleclowp) //저압용이면
@@ -33,60 +33,60 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
@@ -96,9 +96,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -106,13 +106,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -120,13 +120,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -134,16 +134,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -151,13 +151,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -165,13 +165,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -179,7 +179,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
@@ -189,72 +189,72 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
@@ -264,9 +264,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -274,13 +274,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -288,13 +288,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -302,16 +302,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -319,13 +319,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -333,13 +333,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -347,7 +347,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
@@ -357,9 +357,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -367,13 +367,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -381,13 +381,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -395,16 +395,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -412,13 +412,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -426,13 +426,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -440,7 +440,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
@@ -450,9 +450,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>12000)
@@ -460,13 +460,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>12000)
@@ -474,13 +474,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -489,16 +489,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>10000)
@@ -506,13 +506,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>10000)
@@ -520,13 +520,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>10000)
@@ -534,7 +534,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
@@ -544,9 +544,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -555,13 +555,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (300*120)+((elecuse-300)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -570,13 +570,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (300*105)+(150*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -585,16 +585,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 910.0 + (elecuse*120)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>8000)
@@ -602,13 +602,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1600.0 + (200*120)+((elecuse-200)*214.6)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>8000)
@@ -616,13 +616,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 7300.0 + (200*105)+(200*214.6)+((elecuse-450)*307.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>8000)
@@ -630,12 +630,12 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
         }
-        else if(elechighp) //고압용이면
+        else//고압용이면
         {
             if(elecfamilyandwelfare.equals("해당없음"))
                 {
@@ -643,60 +643,60 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
-                            val finalcost=(cost+cost1+cost2)/10*10
+                            var cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
+                            var finalcost=(cost+cost1+cost2)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                 }
@@ -706,9 +706,9 @@ class ResultElectric : AppCompatActivity() {
                         {
                             if(elecuse<=300)
                             {
-                                val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                                val cost1 =round(cost*0.1) //부가가치세
-                                val cost2=(cost*0.037)/10*10 //전력기반기금
+                                var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                                var cost1 =round(cost*0.1) //부가가치세
+                                var cost2=(cost*0.037)/10*10 //전력기반기금
                                 var finalcost=(cost+cost1+cost2)/10*10
 
                                 if(finalcost*0.3>16000)
@@ -716,13 +716,13 @@ class ResultElectric : AppCompatActivity() {
                                 else
                                     finalcost-=(finalcost*0.3)/10*10
 
-                                elecresultTextView.text = finalcost.toString()
+                                elecresultTextView.text = "$finalcost"
                             }
                             else if(elecuse<=450)
                             {
-                                val cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
-                                val cost1 =round(cost*0.1) //부가가치세
-                                val cost2=(cost*0.037)/10*10 //전력기반기금
+                                var cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
+                                var cost1 =round(cost*0.1) //부가가치세
+                                var cost2=(cost*0.037)/10*10 //전력기반기금
                                 var finalcost=(cost+cost1+cost2)/10*10
 
                                 if(finalcost*0.3>16000)
@@ -730,13 +730,13 @@ class ResultElectric : AppCompatActivity() {
                                 else
                                     finalcost-=(finalcost*0.3)/10*10
 
-                                elecresultTextView.text = finalcost.toString()
+                                elecresultTextView.text = "$finalcost"
                             }
                             else
                             {
-                                val cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
-                                val cost1 =round(cost*0.1) //부가가치세
-                                val cost2=(cost*0.037)/10*10 //전력기반기금
+                                var cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
+                                var cost1 =round(cost*0.1) //부가가치세
+                                var cost2=(cost*0.037)/10*10 //전력기반기금
                                 var finalcost=(cost+cost1+cost2)/10*10
 
                                 if(finalcost*0.3>16000)
@@ -744,16 +744,16 @@ class ResultElectric : AppCompatActivity() {
                                 else
                                     finalcost-=(finalcost*0.3)/10*10
 
-                                elecresultTextView.text = finalcost.toString()
+                                elecresultTextView.text = "$finalcost"
                             }
                         }
                         else
                         {
                             if(elecuse<=200)
                             {
-                                val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                                val cost1 =round(cost*0.1) //부가가치세
-                                val cost2=(cost*0.037)/10*10 //전력기반기금
+                                var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                                var cost1 =round(cost*0.1) //부가가치세
+                                var cost2=(cost*0.037)/10*10 //전력기반기금
                                 var finalcost=(cost+cost1+cost2)/10*10
 
                                 if(finalcost*0.3>16000)
@@ -761,13 +761,13 @@ class ResultElectric : AppCompatActivity() {
                                 else
                                     finalcost-=(finalcost*0.3)/10*10
 
-                                elecresultTextView.text = finalcost.toString()
+                                elecresultTextView.text = "$finalcost"
                             }
                             else if(elecuse<=400)
                             {
-                                val cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
-                                val cost1 =round(cost*0.1) //부가가치세
-                                val cost2=(cost*0.037)/10*10 //전력기반기금
+                                var cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
+                                var cost1 =round(cost*0.1) //부가가치세
+                                var cost2=(cost*0.037)/10*10 //전력기반기금
                                 var finalcost=(cost+cost1+cost2)/10*10
 
                                 if(finalcost*0.3>16000)
@@ -775,13 +775,13 @@ class ResultElectric : AppCompatActivity() {
                                 else
                                     finalcost-=(finalcost*0.3)/10*10
 
-                                elecresultTextView.text = finalcost.toString()
+                                elecresultTextView.text = "$finalcost"
                             }
                             else
                             {
-                                val cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
-                                val cost1 =round(cost*0.1) //부가가치세
-                                val cost2=(cost*0.037)/10*10 //전력기반기금
+                                var cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
+                                var cost1 =round(cost*0.1) //부가가치세
+                                var cost2=(cost*0.037)/10*10 //전력기반기금
                                 var finalcost=(cost+cost1+cost2)/10*10
 
                                 if(finalcost*0.3>16000)
@@ -789,7 +789,7 @@ class ResultElectric : AppCompatActivity() {
                                 else
                                     finalcost-=(finalcost*0.3)/10*10
 
-                                elecresultTextView.text = finalcost.toString()
+                                elecresultTextView.text = "$finalcost"
                             }
                     }
                 }
@@ -799,72 +799,72 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     }
@@ -874,9 +874,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -884,13 +884,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -898,13 +898,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -912,16 +912,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -929,13 +929,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -943,13 +943,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -957,7 +957,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     }
@@ -967,9 +967,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -977,13 +977,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -991,13 +991,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>20000)
@@ -1005,16 +1005,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -1022,13 +1022,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -1036,13 +1036,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>16000)
@@ -1050,7 +1050,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     }
@@ -1060,9 +1060,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>12000)
@@ -1070,13 +1070,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>12000)
@@ -1084,13 +1084,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -1099,16 +1099,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>10000)
@@ -1116,13 +1116,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>10000)
@@ -1130,13 +1130,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>10000)
@@ -1144,7 +1144,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     }
@@ -1154,9 +1154,9 @@ class ResultElectric : AppCompatActivity() {
                     {
                         if(elecuse<=300)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -1165,13 +1165,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=450)
                         {
-                            val cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (300*105)+((elecuse-300)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -1180,13 +1180,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (300*105)+(150*174)+((elecuse-450)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
 
@@ -1195,16 +1195,16 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     else
                     {
                         if(elecuse<=200)
                         {
-                            val cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 730.0 + (elecuse*105)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>8000)
@@ -1212,13 +1212,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else if(elecuse<=400)
                         {
-                            val cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 1260.0 + (200*105)+((elecuse-200)*174)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>8000)
@@ -1226,13 +1226,13 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                         else
                         {
-                            val cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
-                            val cost1 =round(cost*0.1) //부가가치세
-                            val cost2=(cost*0.037)/10*10 //전력기반기금
+                            var cost = 6060.0 + (200*105)+(200*174)+((elecuse-400)*242.3)+(elecuse*9)+(elecuse*5)
+                            var cost1 =round(cost*0.1) //부가가치세
+                            var cost2=(cost*0.037)/10*10 //전력기반기금
                             var finalcost=(cost+cost1+cost2)/10*10
 
                             if(finalcost*0.3>8000)
@@ -1240,7 +1240,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost-=(finalcost*0.3)/10*10
 
-                            elecresultTextView.text = finalcost.toString()
+                            elecresultTextView.text = "$finalcost"
                         }
                     }
                     }
