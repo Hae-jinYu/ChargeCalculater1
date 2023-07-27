@@ -21,12 +21,12 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:layout_width="100sp"
+            android:layout_width="120sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="계약종별"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <RadioGroup
             android:id="@+id/contract"
@@ -36,14 +36,14 @@
 
             <RadioButton
                 android:id="@+id/lowp"
-                android:layout_width="125dp"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:paddingRight="1dp"
                 android:text="주택용 저압" />
 
             <RadioButton
                 android:id="@+id/highp"
-                android:layout_width="125dp"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:text="주택용 고압" />
         </RadioGroup>
@@ -61,11 +61,11 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:layout_width="100sp"
+            android:layout_width="120sp"
             android:layout_height="match_parent"
             android:text="대가족 /\n생명유지장치 /\n복지할인"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <Spinner
             android:id="@+id/familyandwelfare"
@@ -87,15 +87,15 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:layout_width="100sp"
+            android:layout_width="120sp"
             android:layout_height="wrap_content"
             android:text="사용량"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/usage"
-            android:layout_width="240dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:hint="0000 kWh"
             android:inputType="number"

@@ -14,6 +14,7 @@
         android:layout_marginTop="10dp"
         android:text="* 서울시 요금 금액을 기준으로 계산함 \n   지역에 따라 요금의 차이가 날 수 있음"
         android:textColor="#FF2525"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -44,7 +45,7 @@
         android:id="@+id/waterResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="204dp"
         android:text="결과 표시"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"

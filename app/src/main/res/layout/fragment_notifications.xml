@@ -165,7 +165,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="* 서울시 요금 금액을 기준으로 계산함\n   지역에 따라 요금, 평균 열량, 보정계수가 다를 수 있음"
+            android:text="* 서울시 요금 금액을 기준으로 계산함"
             android:textColor="#FF0000"
             android:textSize="12sp" />
     </LinearLayout>
@@ -173,12 +173,12 @@
     <Button
         android:id="@+id/resultgasbutton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:background="#000000"
         android:backgroundTint="#FF8661"
         android:text="가스 요금 계산"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
