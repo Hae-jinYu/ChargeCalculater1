@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="generation">
+        <item>해당없음</item>
         <item>복지개별요금 감면</item>
         <item>독립유공자 감면</item>
         <item>다자녀 하수도 감면</item>
