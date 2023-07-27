@@ -60,26 +60,29 @@ class MainActivity : AppCompatActivity() {
         elecresultButton=findViewById(R.id.resultbutton)
         elecuse=findViewById(R.id.usage)
         eleclowp=findViewById(R.id.lowp)
+        elechighp=findViewById(R.id.highp)
         elecfamilynwelfare=findViewById(R.id.familyandwelfare)
         elecsummer=findViewById(R.id.summercheck)
         elecradio=findViewById(R.id.contract)
 
-        var intent= Intent(this,ResultElectric::class.java)
 
-        elecradio.setOnClickListener{
-            if(eleclowp.isChecked)
-                intent.putExtra("eleclowp",true)
-            else if(elechighp.isChecked)
-                intent.putExtra("elechighp",true)
-        }
+
+
         elecresultButton.setOnClickListener{
+            var intent= Intent(this,ResultElectric::class.java)
+
+            if(eleclowp.isChecked)
+            {
+                intent.putExtra("eleclowp",true)
+                intent.putExtra("elechighp",false)
+            }
+            else if(elechighp.isChecked)
+            {
+                intent.putExtra("elechighp",true)
+                intent.putExtra("eleclowp",false)
+            }
 
             intent.putExtra("elecuse",Integer.parseInt(elecuse.text.toString()))
-
-            if(eleclowp.isChecked)
-                intent.putExtra("eleclowp",true)
-            else if(elechighp.isChecked)
-                intent.putExtra("elechighp",true)
 
             intent.putExtra("elecfamilyandwelfare",elecfamilynwelfare.selectedItem.toString())
             if(elecsummer.isChecked)
