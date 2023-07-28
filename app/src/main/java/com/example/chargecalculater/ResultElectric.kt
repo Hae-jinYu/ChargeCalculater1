@@ -26,13 +26,6 @@ class ResultElectric : AppCompatActivity() {
         var elecfamilyandwelfare=intent.getStringExtra("elecfamilyandwelfare")
         var elecsummer=intent.getBooleanExtra("elecsummer",false)
 
-        Log.d("값저압",eleclowp.toString())
-        Log.d("값고압",elechighp.toString())
-        Log.d("값사용", elecuse.toString())
-        if (elecfamilyandwelfare != null) {
-            Log.d("값",elecfamilyandwelfare)
-        }
-        Log.d("값하계",elecsummer.toString())
 
 
         if(eleclowp) //저압용이면
@@ -50,7 +43,7 @@ class ResultElectric : AppCompatActivity() {
 
 
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=450)
                         {
@@ -60,7 +53,7 @@ class ResultElectric : AppCompatActivity() {
                             var finalcost=(cost+cost1+cost2)
 
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -69,7 +62,7 @@ class ResultElectric : AppCompatActivity() {
                             var cost2 = cost*0.037  //전력기반기금
                             var finalcost=(cost+cost1+cost2)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                     else
@@ -81,7 +74,7 @@ class ResultElectric : AppCompatActivity() {
                             var cost2 = cost*0.037  //전력기반기금
                             var finalcost=(cost+cost1+cost2)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=400)
                         {
@@ -90,7 +83,7 @@ class ResultElectric : AppCompatActivity() {
                             var cost2 = cost*0.037  //전력기반기금
                             var finalcost=(cost+cost1+cost2)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -99,7 +92,7 @@ class ResultElectric : AppCompatActivity() {
                             var cost2 = cost*0.037  //전력기반기금
                             var finalcost=(cost+cost1+cost2)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                 }
@@ -119,7 +112,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=450)
                         {
@@ -133,7 +126,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -147,7 +140,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                     else
@@ -164,7 +157,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=400)
                         {
@@ -178,7 +171,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -192,7 +185,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                 }
@@ -209,7 +202,7 @@ class ResultElectric : AppCompatActivity() {
 
                             finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=450)
                         {
@@ -220,7 +213,7 @@ class ResultElectric : AppCompatActivity() {
 
                             finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -231,7 +224,7 @@ class ResultElectric : AppCompatActivity() {
 
                             finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                     else
@@ -245,7 +238,7 @@ class ResultElectric : AppCompatActivity() {
 
                             finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=400)
                         {
@@ -256,7 +249,7 @@ class ResultElectric : AppCompatActivity() {
 
                             finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -267,7 +260,7 @@ class ResultElectric : AppCompatActivity() {
 
                             finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                 }
@@ -287,7 +280,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=450)
                         {
@@ -301,7 +294,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -315,7 +308,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                     else
@@ -332,7 +325,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=400)
                         {
@@ -346,7 +339,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -360,7 +353,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                 }
@@ -380,7 +373,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=450)
                         {
@@ -394,7 +387,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -408,7 +401,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                     else
@@ -425,7 +418,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=400)
                         {
@@ -439,7 +432,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -453,7 +446,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                 }
@@ -473,7 +466,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=450)
                         {
@@ -487,7 +480,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -502,7 +495,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                     else
@@ -519,7 +512,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=400)
                         {
@@ -533,7 +526,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -547,7 +540,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                 }
@@ -570,7 +563,7 @@ class ResultElectric : AppCompatActivity() {
 
 
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=450)
                         {
@@ -585,7 +578,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -600,7 +593,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                     else
@@ -617,7 +610,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else if(elecuse<=400)
                         {
@@ -631,7 +624,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                         else
                         {
@@ -645,7 +638,7 @@ class ResultElectric : AppCompatActivity() {
                             else
                                 finalcost=finalcost-(finalcost*0.3)
 
-                            elecresultTextView.text = "${finalcost.toInt()}"
+                            elecresultTextView.text = "${finalcost.toInt()}원"
                         }
                     }
                 }
@@ -665,7 +658,7 @@ class ResultElectric : AppCompatActivity() {
 
 
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=450)
                     {
@@ -675,7 +668,7 @@ class ResultElectric : AppCompatActivity() {
                         var finalcost=(cost+cost1+cost2)
 
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -684,7 +677,7 @@ class ResultElectric : AppCompatActivity() {
                         var cost2 = cost*0.037  //전력기반기금
                         var finalcost=(cost+cost1+cost2)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
                 else
@@ -696,7 +689,7 @@ class ResultElectric : AppCompatActivity() {
                         var cost2 = cost*0.037  //전력기반기금
                         var finalcost=(cost+cost1+cost2)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=400)
                     {
@@ -705,7 +698,7 @@ class ResultElectric : AppCompatActivity() {
                         var cost2 = cost*0.037  //전력기반기금
                         var finalcost=(cost+cost1+cost2)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -714,7 +707,7 @@ class ResultElectric : AppCompatActivity() {
                         var cost2 = cost*0.037  //전력기반기금
                         var finalcost=(cost+cost1+cost2)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
 
                         Log.d("값0",cost.toString())
                         Log.d("값1",cost1.toString())
@@ -739,7 +732,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=450)
                     {
@@ -753,7 +746,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -767,7 +760,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
                 else
@@ -784,7 +777,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=400)
                     {
@@ -798,7 +791,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -812,7 +805,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
             }
@@ -829,7 +822,7 @@ class ResultElectric : AppCompatActivity() {
 
                         finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=450)
                     {
@@ -840,7 +833,7 @@ class ResultElectric : AppCompatActivity() {
 
                         finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -851,7 +844,7 @@ class ResultElectric : AppCompatActivity() {
 
                         finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
                 else
@@ -865,7 +858,7 @@ class ResultElectric : AppCompatActivity() {
 
                         finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=400)
                     {
@@ -876,7 +869,7 @@ class ResultElectric : AppCompatActivity() {
 
                         finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -887,7 +880,7 @@ class ResultElectric : AppCompatActivity() {
 
                         finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
             }
@@ -907,7 +900,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=450)
                     {
@@ -921,7 +914,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -935,7 +928,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
                 else
@@ -952,7 +945,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=400)
                     {
@@ -966,7 +959,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -980,7 +973,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
             }
@@ -1000,7 +993,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=450)
                     {
@@ -1014,7 +1007,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -1028,7 +1021,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
                 else
@@ -1045,7 +1038,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=400)
                     {
@@ -1059,7 +1052,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -1073,7 +1066,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
             }
@@ -1093,7 +1086,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=450)
                     {
@@ -1107,7 +1100,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -1122,7 +1115,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
                 else
@@ -1139,7 +1132,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=400)
                     {
@@ -1153,7 +1146,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -1167,7 +1160,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
             }
@@ -1189,7 +1182,7 @@ class ResultElectric : AppCompatActivity() {
 
 
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=450)
                     {
@@ -1204,7 +1197,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -1220,7 +1213,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
                 else
@@ -1237,7 +1230,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else if(elecuse<=400)
                     {
@@ -1251,7 +1244,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                     else
                     {
@@ -1265,7 +1258,7 @@ class ResultElectric : AppCompatActivity() {
                         else
                             finalcost=finalcost-(finalcost*0.3)
 
-                        elecresultTextView.text = "${finalcost.toInt()}"
+                        elecresultTextView.text = "${finalcost.toInt()}원"
                     }
                 }
             }
